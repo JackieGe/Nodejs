@@ -7,19 +7,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const func_1 = require("./func");
-//let a = 12
-// let b = 6
-let { a, b } = func_1.swap(6, 12);
-console.log(`a = ${a}, b = ${b}`);
-let addRet = func_1.add(a, b);
-let subRet = func_1.sub(a, b);
-console.log(`${a} + ${b} = ${addRet}`);
-console.log(`${a} - ${b} = ${subRet}`);
-let addAsync = (seed) => __awaiter(this, void 0, void 0, function* () {
-    return seed + 1;
-});
-(() => __awaiter(this, void 0, void 0, function* () {
-    let ret = yield addAsync(1);
-    console.log(`async ret value = ${ret}`);
-}))();
+const Koa = require("koa");
+const koa_bodyparser_1 = require("koa-bodyparser");
+const cors = require("kcors");
+const app = new Koa()
+    .use(cors())
+    .use((ctx, next) => __awaiter(this, void 0, void 0, function* () {
+    ctx.body = "hello koa";
+    //yield next();
+}))
+    .use(koa_bodyparser_1.default());
+Object.defineProperty(exports, "__esModule", { value: true });
+//.use(api.routes())
+// .use(api.allowedMethods());
+exports.default = app;
