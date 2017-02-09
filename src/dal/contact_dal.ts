@@ -18,24 +18,42 @@ const config: pg.PoolConfig = {
 //it will keep idle connections open for a 30 seconds
 //and set a limit of maximum 10 idle clients
 
-function getContacts() {
+function getContacts(): Promise<any[]> {
     const pool = new pg.Pool(config);
-    pool.connect((err, client, done) => {
-        //call `done()` to release the client back to the pool
-        done();
-        if (err) {
-            return console.error('error fetching client from pool', err);
-        }
 
-        client.query('SELECT "Id", "Name" FROM public.contact').then(value => {
+    return pool.connect().then(client => {
+        return client.query('SELECT "Id", "Name" FROM public.contact').then(value => {
             if (value.rowCount > 0) {
                 console.log(`returned ${value.rowCount} records`)
-                for (let row of value.rows) {
-                    console.log(`${row["Name"]}`)
-                }
+                /* for (let row of value.rows) {
+                     console.log(`${row["Name"]}`)
+                 }*/
             }
+            client.release();
+            return value.rows;
+        }).catch(reason => {
+            console.log(reason);
         });
-    })
+    });
+
+    /*
+        return pool.connect((err, client, done) => {
+            //call `done()` to release the client back to the pool
+            done();
+           if (err) {
+                return console.error('error fetching client from pool', err);
+            }
+    
+            return client.query('SELECT "Id", "Name" FROM public.contact').then(value => {
+                    if (value.rowCount > 0) {
+                        console.log(`returned ${value.rowCount} records`)
+                        for (let row of value.rows) {
+                            console.log(`${row["Name"]}`)
+                        }
+                    }
+                    return value.rows
+                });
+        })*/
 }
 
 export { getContacts }
