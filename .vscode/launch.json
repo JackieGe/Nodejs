@@ -8,11 +8,15 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/test.js",
+            "program": "${workspaceRoot}/index.js",
             "cwd": "${workspaceRoot}",
             "runtimeArgs": [
                 "--harmony"
-            ]
+            ],
+            "env": {
+                "NODE_ENV":"development",
+                "PORT":"3001"
+            }
         },
         {
             "type": "node",

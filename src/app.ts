@@ -14,6 +14,5 @@ const app = new Koa()
     })
     .use(new bodyParser())
     .use(api.routes())
-// .use(api.allowedMethods());
-app.listen(3001);
-// export default app;
+    .use(api.allowedMethods());
+ export default app;
