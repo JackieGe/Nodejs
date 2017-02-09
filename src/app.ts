@@ -4,15 +4,9 @@ import * as bodyParser from 'koa-bodyparser';
 import * as cors from 'kcors';
 import * as http from 'http'
 
-http.createServer()
-
 const app = new Koa()
     .use(cors())
-    .use(async (ctx, next) => {
-        ctx.body = "hello koa";
-        await next();
-    })
     .use(new bodyParser())
     .use(api.routes())
     .use(api.allowedMethods());
- export default app;
+export default app;

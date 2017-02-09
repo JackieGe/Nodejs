@@ -6,8 +6,7 @@
         "**/.hg": true,
         "**/.DS_Store": true,
         "src/**/.js": true,
-        "test.js": true,
-        "func.js": true
+        "test/**/*.js": true
     },
     "search.exclude": {
         "**/node_modules": true,
