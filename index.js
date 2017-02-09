@@ -4,4 +4,4 @@ const port = process.env.PORT || 4000
 const src = env === 'production'? './build/app' : './src/app'
 
 const app = require(src).default;
-app.listen(3001);
+app.listen(port);
