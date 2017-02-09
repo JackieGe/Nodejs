@@ -23,7 +23,7 @@ function getContacts(id?: number): Promise<any[]> {
     let queryString = 'SELECT "Id", "Name" FROM public.contact';
     let params: number[];
 
-    if (!Number.isNaN(id)) {
+    if (!isNaN(id)) {
         queryString = queryString + ' where "Id" = $1';
         params = [id];
 
