@@ -2,7 +2,8 @@ import * as koa from 'koa'
 import { getContacts } from '../dal/contact_dal'
 
 const getContact = async (ctx: koa.Context, next) => {
-    let contacts = await getContacts();
+    let contactId = (<any>ctx).params.id;
+    let contacts = await getContacts(contactId);
     for (let row of contacts) {
         console.log(`${row["Name"]}`)
     }
