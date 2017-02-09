@@ -25,3 +25,8 @@ Usage:
 
 8. #Open the code directory via VSCode, where we can write code
 
+#how to install koa2 ?
+npm install koa@next
+npm install koa-router@next
+npm install koa-bodyparser@next
+npm install kcors@next
