@@ -12,8 +12,8 @@ const app = new Koa()
         ctx.body = "hello koa";
         await next();
     })
-  .use(new bodyParser());
-//.use(api.routes())
+    .use(new bodyParser())
+    .use(api.routes())
 // .use(api.allowedMethods());
 app.listen(3001);
 // export default app;

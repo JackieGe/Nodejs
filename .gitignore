@@ -1,1 +1,7 @@
 node_modules
+#src/*.js
+#test.js
+#func.js
+*.DS_Store
+*.js
+!src/index.js
