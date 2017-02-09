@@ -4,7 +4,7 @@ Welcome to email to gewenqiu@163.com if you have any questions It will be my ple
 
 Usage:
 1. #Install typescript:
-   npm install typescript -g
+   sudo npm install typescript -g
    #Check version and see if its properly installed (require v2.1 and above)
    tsc -v
    # refer to http://www.typescriptlang.org/docs/tutorial.html
