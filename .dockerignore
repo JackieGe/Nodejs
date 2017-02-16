@@ -1,0 +1,8 @@
+.git
+.gitignore
+.vscode
+database
+dev
+node_modules
+test
+README.md
