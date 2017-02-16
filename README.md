@@ -7,6 +7,7 @@ Usage:
    sudo npm install typescript -g
 
    -- Check version and see if its properly installed (require v2.1 and above)
+
    tsc -v
    
    -- refer to http://www.typescriptlang.org/docs/tutorial.html
@@ -20,9 +21,11 @@ Usage:
    npm install 
 
    -- npm 服务器在国外，如果网速不够好的话，可以设置从淘宝镜像下载。如下命令：
+
    npm config set registry "https://registry.npm.taobao.org/"
 
    或者仅仅在安装npm包时 使用淘宝镜像。
+   
    npm install --registry "https://registry.npm.taobao.org/"
 
 #5 compile typescript based on "tsconfig.json"
