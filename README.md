@@ -1,4 +1,4 @@
-learn to write Koa2 in typescript and run on nodejs. 
+Learn to write Koa2 in typescript and run on nodejs. 
 
 Welcome to email to gewenqiu@163.com if you have any questions It will be my pleasure if it can help.
 
@@ -17,7 +17,7 @@ Usage:
 #3. git clone the code to your local
    git clone https://github.com/JackieGe/nodejs.git
 
-#4. install package based on "package.json"
+#4. Install package based on "package.json"
    npm install 
 
    ## npm 服务器在国外，如果网速不够好的话，可以设置从淘宝镜像下载。如下命令：
@@ -28,13 +28,13 @@ Usage:
 
    npm install --registry "https://registry.npm.taobao.org/"
 
-#5. compile typescript based on "tsconfig.json"
+#5. Compile typescript based on "tsconfig.json"
    tsc
 
-#6. start
+#6. Start
    node --harmony index.js
 
 #7. Open the code directory via VSCode, where we can write code
 
-#8. how to install koa2 ?
+#8. How to install koa2 ?
 npm install koa@next koa-router@next koa-bodyparser@next kcors@next
