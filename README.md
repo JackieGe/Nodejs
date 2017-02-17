@@ -22,19 +22,19 @@ Welcome to email to gewenqiu@163.com if you have any questions It will be my ple
 
 1. git clone the code to your local
 
-    git clone https://github.com/JackieGe/nodejs.git
+    > git clone https://github.com/JackieGe/nodejs.git
 
 2. Install package based on "package.json"
 
-    npm install 
+    > npm install 
 
    npm 服务器 (http://registry.npmjs.org/) 在国外，如果网速不够好的话，可以设置从淘宝镜像下载。如下命令：
 
-    npm config set registry "https://registry.npm.taobao.org/"
+    > npm config set registry "https://registry.npm.taobao.org/"
 
    或者仅仅在安装npm包时 使用淘宝镜像。
 
-    npm install --registry "https://registry.npm.taobao.org/"
+    > npm install --registry "https://registry.npm.taobao.org/"
 
 3. Compile typescript based on "tsconfig.json"
     
@@ -52,3 +52,4 @@ Welcome to email to gewenqiu@163.com if you have any questions It will be my ple
 
 2. How to install koa2 ?
     npm install koa@next koa-router@next koa-bodyparser@next kcors@next
+    
