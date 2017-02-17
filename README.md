@@ -20,7 +20,7 @@ Usage:
 #4. Install package based on "package.json"
    npm install 
 
-   ## npm 服务器在国外，如果网速不够好的话，可以设置从淘宝镜像下载。如下命令：
+   ## npm 服务器 (http://registry.npmjs.org/) 在国外，如果网速不够好的话，可以设置从淘宝镜像下载。如下命令：
 
    npm config set registry "https://registry.npm.taobao.org/"
 

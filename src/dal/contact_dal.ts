@@ -4,12 +4,13 @@ import * as pg from 'pg'
 // and client options
 // note: all config is optional and the environment variables
 // will be read if the config is not present
+process.env.PGUSER
 const config: pg.PoolConfig = {
-    user: 'postgres', //env var: PGUSER
-    database: 'test', //env var: PGDATABASE
-    password: 'jackie', //env var: PGPASSWORD
-    host: 'localhost', // Server hosting the postgres database
-    port: 5433, //env var: PGPORT
+    user: process.env.PGUSER, //env var: PGUSER
+    database: process.env.PGDATABASE, //env var: PGDATABASE
+    password: process.env.PGPASSWORD, //env var: PGPASSWORD
+    host: process.env.PGSERVER, // Server hosting the postgres database
+    port: process.env.PGPORT, //env var: PGPORT
     max: 10, // max number of clients in the pool
     idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
 };
