@@ -1,3 +1,3 @@
 cd ..
 
-tsc && docker build -t JackieGe/node:0.1 .
+tsc && docker build -t jackiege/node:0.1 .
