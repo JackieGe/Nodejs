@@ -6,7 +6,14 @@ Welcome to email to gewenqiu@163.com if you have any questions It will be my ple
 
 ### Software Prerequites
 
-1. Install typescript:
+1. Install nodejs (v6.9 or above)
+   Check its version:
+
+   `node -v`
+   
+   `npm -v`
+
+2. Install typescript:
 
    `sudo npm install typescript -g`
 
@@ -15,8 +22,6 @@ Welcome to email to gewenqiu@163.com if you have any questions It will be my ple
    `tsc -v`
    
    Refer to http://www.typescriptlang.org/docs/tutorial.html
-
-2. Install nodejs (v6.9 or above)
 
 ### Getting Sources
 
