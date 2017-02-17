@@ -51,5 +51,6 @@ Welcome to email to gewenqiu@163.com if you have any questions It will be my ple
 1. Open the code directory via VSCode, where we can write code
 
 2. How to install koa2 ?
+
    `npm install koa@next koa-router@next koa-bodyparser@next kcors@next`
     
