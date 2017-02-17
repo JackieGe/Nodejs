@@ -1,7 +1,7 @@
 CREATE DATABASE test;
 \c test;
 CREATE TABLE contact (
-    id int,
+    Id int,
     name varchar(100)
 );
 INSERT INTO contact VALUES(1, 'Jackie'); 

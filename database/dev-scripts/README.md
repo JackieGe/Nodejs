@@ -1,6 +1,6 @@
 # How to run with original postgres image (without build Dockerfile)
 
-1. Execute launch_db_serv.sh to start the postgres server container
+1. Execute launch_dbserv.sh to start the postgres server container
 
 2. Run below
 
