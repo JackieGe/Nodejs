@@ -1,3 +1,3 @@
 cd ..
 
-docker build -t postgres_test:0.1 .
+docker build -t JackieGe/postgres:0.1 .

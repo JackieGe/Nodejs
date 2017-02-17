@@ -1,12 +1,16 @@
 # How to run with original postgres image (without build Dockerfile)
 
+## Start Server
+
 1. Execute launch_dbserv.sh to start the postgres server container
 
-2. Run below
+## Test Client
 
-   `docker run -it --name postgres_test_client --link some_postgres:postgres postgres psql -h postgres -U postgres -d postgres`
+1. Run below
 
-3. Or run below
+   `docker run -it --name postgres_test_client --link postgres_serv01:postgres postgres psql -h postgres -U postgres -d postgres`
+
+2. Or run below
 
    `docker run -it --name postgres_test_client postgres psql -h <Your host machine real IP, not 127.0.0.1 or localhost> -p 15432 -U postgres -d postgres`
 
