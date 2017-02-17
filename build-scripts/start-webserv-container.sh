@@ -1,0 +1,1 @@
+docker run -d -p 8081:8081 --name node_test01 node_test:0.1

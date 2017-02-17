@@ -1,1 +1,0 @@
-docker run -d -P --name node_test01 node_test:0.1
