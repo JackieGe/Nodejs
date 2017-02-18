@@ -18,7 +18,8 @@ RUN npm install --registry "https://registry.npm.taobao.org/" --production
 COPY dist .
 
 ENV PGSERVER="192.168.1.105" \
-    PGPORT=15432 PGUSER="postgres" \
+    PGPORT=15432 \
+    PGUSER="postgres" \
     PGPASSWORD="mysecretpassword" \
     PGDATABASE="test" \
     PORT=8081
