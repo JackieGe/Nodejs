@@ -4,7 +4,7 @@
   "description": "learn typescript, es6, es7 on nodejs. welcome to email to gewenqiu@163.com if you have any questions",
   "main": "test.js",
   "scripts": {
-    "start": "node --harmony index.js",
+    "start": "node --harmony dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
