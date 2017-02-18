@@ -15,12 +15,13 @@ const config: pg.PoolConfig = {
     idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
 };
 
+const pgPool = new pg.Pool(config);
+
 //this initializes a connection pool
 //it will keep idle connections open for a 30 seconds
 //and set a limit of maximum 10 idle clients
 
 function getContacts(id?: number): Promise<any[]> {
-    const pool = new pg.Pool(config);
     let queryString = 'SELECT "Id", "Name" FROM public.contact';
     let params: number[];
 
@@ -29,7 +30,7 @@ function getContacts(id?: number): Promise<any[]> {
         params = [id];
 
     }
-    return pool.connect().then(client => {
+    return pgPool.connect().then(client => {
         return client.query(queryString, params).then(value => {
             if (value.rowCount > 0) {
                 console.log(`returned ${value.rowCount} records`)
