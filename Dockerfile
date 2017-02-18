@@ -17,13 +17,11 @@ RUN npm install --registry "https://registry.npm.taobao.org/" --production
 # copy files under dist to /WebServer
 COPY dist .
 
-ENV PGSERVER="192.168.1.105"
-ENV PGPORT=15432
-ENV PGUSER="postgres"
-ENV PGPASSWORD="mysecretpassword"
-ENV PGDATABASE="test"
-
-ENV PORT=8081
+ENV PGSERVER="192.168.1.105" \
+    PGPORT=15432 PGUSER="postgres" \
+    PGPASSWORD="mysecretpassword" \
+    PGDATABASE="test" \
+    PORT=8081
 EXPOSE 8081
 
 CMD ["npm", "start"]

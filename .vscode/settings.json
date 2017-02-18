@@ -6,13 +6,19 @@
         "**/.hg": true,
         "**/.DS_Store": true,
         "src/**/.js": true,
-        "test/**/*.js": true
+        "src/**/.js.map": true,
+        "test/**/*.js": true,
+        "*.js": true,
+        "*.js.map": true
     },
     "search.exclude": {
         "**/node_modules": true,
         "**/bower_components": true,
         "src/**/.js": true,
-        "test.js": true,
-        "func.js": true
+        "src/**/.js.map": true,
+        "*.js": true,
+        "*.js.map": true
+        // "test.js": true,
+        //"func.js": true
     }
 }

@@ -2,7 +2,9 @@
 .gitignore
 .vscode
 database
-dev
+dev-scripts
+build-scripts
 node_modules
+src
 test
 README.md

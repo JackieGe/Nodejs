@@ -14,15 +14,20 @@
                 "--harmony"
             ],
             "env": {
-                "NODE_ENV":"development",
-                "PORT":"3001"
+                "NODE_ENV": "development",
+                "PGSERVER": "localhost",
+                "PGPORT": "5433",
+                "PGDATABASE": "test",
+                "PGUSER": "postgres",
+                "PGPASSWORD": "jackie",
+                "PORT": "3001"
             }
         },
         {
             "type": "node",
             "request": "attach",
             "name": "Attach to Process",
-            "port": 5858
+            "port": 3001
         }
     ]
 }

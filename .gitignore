@@ -4,6 +4,7 @@ node_modules
 #func.js
 *.DS_Store
 *.js
+*.js.map
 *.log
-!src/index.js
+#!src/index.js
 dist

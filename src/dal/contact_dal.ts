@@ -4,7 +4,6 @@ import * as pg from 'pg'
 // and client options
 // note: all config is optional and the environment variables
 // will be read if the config is not present
-process.env.PGUSER
 const config: pg.PoolConfig = {
     user: process.env.PGUSER, //env var: PGUSER
     database: process.env.PGDATABASE, //env var: PGDATABASE
