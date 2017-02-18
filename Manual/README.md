@@ -65,16 +65,19 @@ Docker hub的服务器在国外。中国国内可以用阿里加速器，更快�
 Each command (e.g. RUN, ENV, EXPOSE, VOLUME) in dockerfile would generate a layer. Its recommended to combine multiple usages of the same commands, to reduce layers generated. Usage exampe:
 
 RUN apt-get update \
+
     && apt-get install git python
 
 ENV PGSERVER="192.168.1.105" \
+
     PGPORT=15432 PGUSER="postgres" \
+
     PGPASSWORD="mysecretpassword" \
+
     PGDATABASE="test" \
+
     PORT=8081
 
 EXPOSE 8080 8081 8082
-Ï
-VOLUME ["/var/data", "/var/log"]
 
- 
+VOLUME ["/var/data", "/var/log"] 
