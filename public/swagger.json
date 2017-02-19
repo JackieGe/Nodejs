@@ -1,0 +1,46 @@
+{
+    "swagger": "2.0",
+    
+    "info": {
+        "version": "0.0.0",
+        "title": "CRM"
+    },
+    "paths": {
+        "/api/contact": {
+            "get": {
+                "description": "Gets `contact` objects.\nOptional query param of **size** determines\nsize of returned array\n",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Size of array",
+                        "required": false,
+                        "type": "number",
+                        "format": "double"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "title": "ArrayOfContacts",
+                            "type": "array",
+                            "items": {
+                                "title": "contact",
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "number"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

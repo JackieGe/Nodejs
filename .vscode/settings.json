@@ -9,7 +9,8 @@
         "src/**/.js.map": true,
         "test/**/*.js": true,
         "*.js": true,
-        "*.js.map": true
+        "*.js.map": true,
+        "public/swagger-ui-master": true
     },
     "search.exclude": {
         "**/node_modules": true,
@@ -17,7 +18,8 @@
         "src/**/.js": true,
         "src/**/.js.map": true,
         "*.js": true,
-        "*.js.map": true
+        "*.js.map": true,
+        "public/swagger-ui-master": true
         // "test.js": true,
         //"func.js": true
     }
