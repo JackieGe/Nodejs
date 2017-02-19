@@ -23,6 +23,8 @@ Welcome to email to gewenqiu@163.com if you have any questions It will be my ple
    
    Refer to http://www.typescriptlang.org/docs/tutorial.html
 
+3. Install Postgresql database
+
 ### Getting Sources
 
 1. Clone the code to your local
@@ -44,6 +46,8 @@ Welcome to email to gewenqiu@163.com if you have any questions It will be my ple
 3. Compile typescript based on "tsconfig.json"
     
    `tsc`
+
+4. Execute the database scripts in your Postgresql db.
 
 ### Start Service
 
