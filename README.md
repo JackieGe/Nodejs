@@ -1,4 +1,4 @@
-# Learn to write Koa2 in typescript and run on nodejs. 
+# Build Koa2 project in typescript and run on nodejs. 
 
 Welcome to email to gewenqiu@163.com if you have any questions It will be my pleasure if it can help.
 
