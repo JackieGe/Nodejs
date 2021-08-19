@@ -19,3 +19,4 @@ let addAsync = async (seed: number) => {
     let ret = await addAsync(1);
     console.log(`async ret value = ${ret}`)
 })()
+// make test2
