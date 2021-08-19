@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+</head>
+<body>
+<header>
+    <h1>时钟</h1>
+</header>
+<artical>
+    <section>
+        <figure>
+            <canvas id="one" width="800" height="800"></canvas>
+        </figure>
+    </section>
+</artical>
+<script>
+    var one=document.getElementById("one");
+    var context=one.getContext("2d");
+    function clock() {
+        var sec=new Date().getSeconds();
+        var min=new Date().getMinutes();
+        var hour=new Date().getHours();
+        //设置表盘
+        //圆形渐变色参数分别为两个圆心和半径
+        var g1 = context.createRadialGradient(400, 400, 0, 400, 400, 200);
+        //设置两个渐变色的参数
+        g1.addColorStop(0, "#fcfcfc");
+        g1.addColorStop(1, "#defdff");
+        //设置线宽
+        context.lineWidth = 2;
+        context.fillStyle = g1;
+        context.beginPath();
+        context.arc(400, 400, 200, 0,360, false);
+        context.closePath();
+        context.fill();
+        context.stroke();
+        context.fillStyle="yellow";
+        context.beginPath();
+        context.arc(400,400,10,0,360, false);
+        context.closePath();
+        context.fill();
+
+        //时针刻度盘
+        for (var i = 0; i < 12; i++) {
+            context.save();
+            //将坐标原点位置移动到圆心处
+            context.translate(400, 400);
+            context.rotate(i*30*Math.PI/180);
+            context.beginPath();
+            context.moveTo(0, -200);
+            context.lineTo(0, -180);
+            context.closePath();
+            context.stroke();
+            context.restore();
+        }
+        //分针刻度盘和秒针刻度盘
+        for (var i = 0; i < 60; i++) {
+            if (i%5!=0) {
+                context.save();
+                context.strokeStyle="red";
+                context.translate(400, 400);
+                context.rotate(i*6*Math.PI/180);
+                context.beginPath();
+                context.moveTo(0, -200);
+                context.lineTo(0, -190);
+                context.closePath();
+                context.stroke();
+                context.restore();
+            }
+
+        }
+        //秒针
+        context.save();
+        context.fillStyle="red";
+        context.translate(400, 400);
+        context.rotate(sec*6*Math.PI/180);
+        context.beginPath();
+        context.moveTo(0, -170);
+        context.lineTo(-5, -30);
+        context.lineTo(0, -10);
+        context.lineTo(5, -30);
+        context.closePath();
+        context.fill();
+        context.restore();
+
+
+        //分针
+        context.save();
+        context.fillStyle="blue";
+        context.translate(400,400);
+        context.rotate(min*6*Math.PI/180);
+        context.beginPath();
+        context.moveTo(0, -150);
+        context.lineTo(-5, -30);
+        context.lineTo(0, -10);
+        context.lineTo(5, -30);
+        context.closePath();
+        context.fill();
+        context.restore();
+
+        //时针
+        context.save();
+        context.lineWidth=2;
+        context.fillStyle="black";
+        context.translate(400,400);
+        context.rotate(hour*30*Math.PI/180);
+        context.beginPath();
+        context.moveTo(0, -130);
+        context.lineTo(-8,-30);
+        context.lineTo(0,-10);
+        context.lineTo(8,-30);
+        context.closePath();
+        context.fill();
+        context.restore();
+
+    }
+    context.clearRect(0,0,800,800);//清除画布
+    clock();
+    setInterval(clock,1000);
+
+</script>
+</body>
+</html>
